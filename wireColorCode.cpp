@@ -1,5 +1,6 @@
 #include <iostream>
 #include <assert.h>
+#include "wireColorCode.hpp"
 
 namespace TelCoColorCoder 
 {
