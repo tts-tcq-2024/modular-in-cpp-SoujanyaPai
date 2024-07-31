@@ -12,6 +12,8 @@ namespace TeleComColorCoder
 
     extern const char* majorColorNames[];
     extern const char* minorColorNames[];
+    extern int numberOfMajorColors;
+    extern int numberOfMinorColors;
 
 class WireColorPair {
         private:
