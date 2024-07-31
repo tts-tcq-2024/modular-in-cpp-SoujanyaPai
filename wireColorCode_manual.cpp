@@ -6,7 +6,7 @@ namespace TeleComColorCoder
         std::string formattedPairs;
         for (int minor = 0; minor < numberOfMinorColors; ++minor) {
             WireColorPair colorPair = getColorFromPairNumber(static_cast<int>(major) * numberOfMinorColors + minor + 1);
-            formattedPairs += colorPair.toString() + " - " + std::to_string(getPairNumberFromColor(getMajorWireColor(), getMinorWireColor())) + "\n";
+            formattedPairs += colorPair.toString() + " - " + std::to_string(getPairNumberFromColor(getMajorColor(), getMinorColor())) + "\n";
         }
         return formattedPairs;
     }
