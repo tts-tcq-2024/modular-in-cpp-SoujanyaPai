@@ -7,8 +7,8 @@ void testNumberToPair(int pairNumber,
     TeleComColorCoder::WireColorPair colorPair =
         TeleComColorCoder::getColorFromPairNumber(pairNumber);
     std::cout << "Got pair " << colorPair.toString() << std::endl;
-    assert(colorPair.getMajor() == expectedMajor);
-    assert(colorPair.getMinor() == expectedMinor);
+    assert(colorPair.getMajorColor() == expectedMajor);
+    assert(colorPair.getMinorColor() == expectedMinor);
 }
 
 void testPairToNumber(
