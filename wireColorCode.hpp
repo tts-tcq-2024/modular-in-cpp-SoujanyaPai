@@ -32,7 +32,7 @@ class WireColorPair {
 
     WireColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
-    std::string formatColorCodingReferenceManual();
+    std::string formatWireColorCodeManual();
 }
 
 #endif //WIRECOLORCODE_HPP
