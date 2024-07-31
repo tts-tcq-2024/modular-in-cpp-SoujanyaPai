@@ -11,7 +11,7 @@ namespace TeleComColorCoder
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor = (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
         MinorColor minorColor = (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
-        return ColorPair(majorColor, minorColor);
+        return WireColorPair(majorColor, minorColor);
     }
 
     int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
