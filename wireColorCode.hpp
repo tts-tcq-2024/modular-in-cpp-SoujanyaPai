@@ -32,6 +32,8 @@ class WireColorPair {
 
     WireColorPair getColorFromPairNumber(int pairNumber);
     int getPairNumberFromColor(MajorColor major, MinorColor minor);
+    MajorColor getMajorWireColor() const;
+    MinorColor getMinorWireColor() const;
     std::string formatColorPairsForMajorColor(MajorColor major);
     std::string formatWireColorCodeManual();
 }
