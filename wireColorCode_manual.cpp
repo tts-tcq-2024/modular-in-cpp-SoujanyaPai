@@ -2,11 +2,11 @@
 
 namespace TeleComColorCoder 
 {
-  MajorColor getMajorWireColor() const {
+  MajorColor getMajorWireColor() {
         return majorWireColor;
     }
 
-  MinorColor getMinorWireColor() const {
+  MinorColor getMinorWireColor() {
         return minorWireColor;
     }
 
