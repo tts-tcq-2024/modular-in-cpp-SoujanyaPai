@@ -2,7 +2,7 @@
 #include <string>
 #include "wireColorCode.hpp"
 
-namespace TelCoColorCoder 
+namespace TeleComColorCoder 
 {
     const char* MajorColorNames[] = {"White", "Red", "Black", "Yellow", "Violet"};
         int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
