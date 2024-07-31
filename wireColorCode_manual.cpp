@@ -3,18 +3,18 @@
 namespace TeleComColorCoder 
 {
   MajorColor getMajorWireColor() {
-        return majorWireColor;
+        return majorColor;
     }
 
   MinorColor getMinorWireColor() {
-        return minorWireColor;
+        return minorColor;
     }
 
   std::string formatColorPairsForMajorColor(MajorColor major) {
         std::string formattedPairs;
         for (int minor = 0; minor < numberOfMinorColors; ++minor) {
             WireColorPair colorPair = getColorFromPairNumber(static_cast<int>(major) * numberOfMinorColors + minor + 1);
-            formattedPairs += colorPair.toString() + " - " + std::to_string(getPairNumberFromColor(colorPair.getMajorWireColor(), colorPair.getMinorWireColor())) + "\n";
+            formattedPairs += colorPair.toString() + " - " + std::to_string(getPairNumberFromColor(getMajorWireColor(), getMinorWireColor())) + "\n";
         }
         return formattedPairs;
     }
@@ -22,7 +22,7 @@ namespace TeleComColorCoder
     std::string formatColorCodingReferenceManual() {
         std::string referenceManual;
         for (int major = 0; major < numberOfMajorColors; ++major) {
-            referenceManual += formatWireColorCodeManual(static_cast<MajorWireColor>(major));
+            referenceManual += formatWireColorCodeManual(static_cast<MajorColor>(major));
         }
         return referenceManual;
     }
