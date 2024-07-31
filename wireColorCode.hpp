@@ -1,6 +1,9 @@
 #ifndef WIRECOLORCODE_HPP
 #define WIRECOLORCODE_HPP
 
+#include <iostream>
+#include <string>
+
 namespace TeleComColorCoder 
 {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
