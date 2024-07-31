@@ -5,7 +5,7 @@ void testNumberToPair(int pairNumber,
     TeleComColorCoder::MinorColor expectedMinor)
 {
     TeleComColorCoder::WireColorPair colorPair =
-        TeleComColorCoder::GetColorFromPairNumber(pairNumber);
+        TeleComColorCoder::getColorFromPairNumber(pairNumber);
     std::cout << "Got pair " << colorPair.ToString() << std::endl;
     assert(colorPair.getMajor() == expectedMajor);
     assert(colorPair.getMinor() == expectedMinor);
@@ -16,7 +16,7 @@ void testPairToNumber(
     TeleComColorCoder::MinorColor minor,
     int expectedPairNumber)
 {
-    int pairNumber = TeleComColorCoder::GetPairNumberFromColor(major, minor);
+    int pairNumber = TeleComColorCoder::getPairNumberFromColor(major, minor);
     std::cout << "Pair number is" << pairNumber << std::endl;
     assert(pairNumber == expectedPairNumber);
 }
