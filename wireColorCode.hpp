@@ -6,11 +6,8 @@ namespace TeleComColorCoder
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
-    static char* MajorColorNames[];
-    static char* MinorColorNames[];
-
-    ColorPair GetColorFromPairNumber(int pairNumber);
-    int GetPairNumberFromColor(MajorColor major, MinorColor minor);
+    const char* MajorColorNames[];
+    const char* MinorColorNames[];
 
 class ColorPair {
         private:
@@ -27,6 +24,8 @@ class ColorPair {
                 return minorColor;
             }
             std::string ToString();
+            ColorPair GetColorFromPairNumber(int pairNumber);
+            int GetPairNumberFromColor(MajorColor major, MinorColor minor);
     };
 }
 
