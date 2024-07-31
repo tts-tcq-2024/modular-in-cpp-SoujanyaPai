@@ -7,7 +7,7 @@ namespace TeleComColorCoder
     const char* MinorColorNames[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
         int numberOfMinorColors = sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
 
-    ColorPair GetColorFromPairNumber(int pairNumber) {
+    WireColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
         MajorColor majorColor = (MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
         MinorColor minorColor = (MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
@@ -18,7 +18,7 @@ namespace TeleComColorCoder
         return major * numberOfMinorColors + minor + 1;
     }
 
-    std::string ColorPair::ToString() {
+    std::string WireColorPair::ToString() {
         std::string colorPairStr = MajorColorNames[majorColor];
         colorPairStr += " ";
         colorPairStr += MinorColorNames[minorColor];
