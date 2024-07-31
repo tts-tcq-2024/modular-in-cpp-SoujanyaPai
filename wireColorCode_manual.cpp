@@ -2,14 +2,6 @@
 
 namespace TeleComColorCoder 
 {
-  MajorColor getMajorWireColor() {
-        return majorColor;
-    }
-
-  MinorColor getMinorWireColor() {
-        return minorColor;
-    }
-
   std::string formatColorPairsForMajorColor(MajorColor major) {
         std::string formattedPairs;
         for (int minor = 0; minor < numberOfMinorColors; ++minor) {
