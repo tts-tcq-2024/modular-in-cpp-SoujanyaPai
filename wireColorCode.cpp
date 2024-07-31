@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include <cassert>
 #include "wireColorCode.hpp"
 
 namespace TeleComColorCoder 
