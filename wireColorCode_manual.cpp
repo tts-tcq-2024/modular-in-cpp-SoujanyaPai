@@ -14,7 +14,7 @@ namespace TeleComColorCoder
     std::string formatColorCodingReferenceManual() {
         std::string referenceManual;
         for (int major = 0; major < numberOfMajorColors; ++major) {
-            referenceManual += formatWireColorCodeManual(static_cast<MajorColor>(major));
+            referenceManual += formatColorPairsForMajorColor(static_cast<MajorColor>(major));
         }
         return referenceManual;
     }
