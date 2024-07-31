@@ -1,5 +1,17 @@
-#ifndef WIRECOLORCODE
-#define WIRECOLORCODE
+#ifndef WIRECOLORCODE_HPP
+#define WIRECOLORCODE_HPP
+
+namespace TeleComColorCoder 
+{
+    enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
+    enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
+
+    const char* MajorColorNames[];
+    const char* MinorColorNames[];
+
+    ColorPair GetColorFromPairNumber(int pairNumber);
+    int GetPairNumberFromColor(MajorColor major, MinorColor minor);
+
 class ColorPair {
         private:
             MajorColor majorColor;
@@ -14,11 +26,8 @@ class ColorPair {
             MinorColor getMinor() {
                 return minorColor;
             }
-            std::string ToString() {
-                std::string colorPairStr = MajorColorNames[majorColor];
-                colorPairStr += " ";
-                colorPairStr += MinorColorNames[minorColor];
-                return colorPairStr;
-            }
+            std::string ToString();
     };
-#endif
+}
+
+#endif //WIRECOLORCODE_HPP
