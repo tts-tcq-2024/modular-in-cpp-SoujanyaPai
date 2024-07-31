@@ -13,12 +13,12 @@ namespace TeleComColorCoder
     extern const char* MajorColorNames[];
     extern const char* MinorColorNames[];
 
-class ColorPair {
+class WireColorPair {
         private:
             MajorColor majorColor;
             MinorColor minorColor;
         public:
-            ColorPair(MajorColor major, MinorColor minor):
+            WireColorPair(MajorColor major, MinorColor minor):
                 majorColor(major), minorColor(minor)
             {}
             MajorColor getMajor() {
@@ -30,8 +30,9 @@ class ColorPair {
             std::string ToString();
     };
 
-    ColorPair GetColorFromPairNumber(int pairNumber);
+    WireColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
+    std::string formatColorCodingReferenceManual();
 }
 
 #endif //WIRECOLORCODE_HPP
