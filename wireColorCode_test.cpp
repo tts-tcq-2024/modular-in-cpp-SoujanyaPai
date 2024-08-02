@@ -1,32 +1,32 @@
 #include "wireColorCode.hpp"
 
-void testNumberToPair(int pairNumber,
-    TeleComColorCoder::MajorColor expectedMajor,
-    TeleComColorCoder::MinorColor expectedMinor)
+void testPairNumberToColorPair(int pairNumber,
+    TeleComColorCoder::MajorColor expectedMajorColor,
+    TeleComColorCoder::MinorColor expectedMinorColor)
 {
     TeleComColorCoder::WireColorPair colorPair =
         TeleComColorCoder::getColorFromPairNumber(pairNumber);
     std::cout << "Color pair is " << colorPair.toString() << std::endl;
-    assert(colorPair.getMajorColor() == expectedMajor);
-    assert(colorPair.getMinorColor() == expectedMinor);
+    assert(colorPair.getMajorColor() == expectedMajorColor);
+    assert(colorPair.getMinorColor() == expectedMinorColor);
 }
 
-void testPairToNumber(
-    TeleComColorCoder::MajorColor major,
-    TeleComColorCoder::MinorColor minor,
+void testColorPairToPairNumber(
+    TeleComColorCoder::MajorColor majorColor,
+    TeleComColorCoder::MinorColor minorColor,
     int expectedPairNumber)
 {
-    int pairNumber = TeleComColorCoder::getPairNumberFromColor(major, minor);
+    int pairNumber = TeleComColorCoder::getPairNumberFromColor(majorColor, minorColor);
     std::cout << "Pair number is " << pairNumber << std::endl;
     assert(pairNumber == expectedPairNumber);
 }
 
 int main() {
-    testNumberToPair(4, TeleComColorCoder::WHITE, TeleComColorCoder::BROWN);
-    testNumberToPair(5, TeleComColorCoder::WHITE, TeleComColorCoder::SLATE);
+    testPairNumberToColorPair(4, TeleComColorCoder::WHITE, TeleComColorCoder::BROWN);
+    testPairNumberToColorPair(5, TeleComColorCoder::WHITE, TeleComColorCoder::SLATE);
 
-    testPairToNumber(TeleComColorCoder::BLACK, TeleComColorCoder::ORANGE, 12);
-    testPairToNumber(TeleComColorCoder::VIOLET, TeleComColorCoder::SLATE, 25);
+    testColorPairToPairNumber(TeleComColorCoder::BLACK, TeleComColorCoder::ORANGE, 12);
+    testColorPairToPairNumber(TeleComColorCoder::VIOLET, TeleComColorCoder::SLATE, 25);
 
     return 0;
 }
