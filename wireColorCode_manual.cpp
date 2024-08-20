@@ -11,7 +11,8 @@ namespace TeleComColorCoder
           formattedPairs +=
               colorPair.toString() + " - "
               + std::to_string(getPairNumberFromColor(
-              colorPair.getMajorColor(), colorPair.getMinorColor())) + "\n";
+              colorPair.getMajorColor(), colorPair.getMinorColor())) 
+              + "\n";
         }
         return formattedPairs;
     }
