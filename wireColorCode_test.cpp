@@ -16,7 +16,8 @@ void testColorPairToPairNumber(
     TeleComColorCoder::MinorColor minorColor,
     int expectedPairNumber)
 {
-    int pairNumber = TeleComColorCoder::getPairNumberFromColor(majorColor, minorColor);
+    int pairNumber = TeleComColorCoder::getPairNumberFromColor(
+        majorColor, minorColor);
     std::cout << "Pair number is " << pairNumber << std::endl;
     assert(pairNumber == expectedPairNumber);
 }
